@@ -885,6 +885,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .leg-number .title-leg .col-two-field {
   margin-top: 0;
+  display: contents;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .leg-number .title-leg .col-two-field .add-button {
@@ -1446,13 +1447,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
   .bonds-wrap-page .content-col .bonds-body-wrap .title-leg-bottom p {
     width: 100% !important;
-    text-align: center;
   }
   .bonds-wrap-page .content-col .bonds-body-wrap .title-leg-bottom .col-two-field {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     margin: 20px 0;
+    display: table-cell !important;
+    text-align: -webkit-center !important;
   }
   .bonds-wrap-page .content-col .bonds-body-wrap .title-leg-bottom .col-two-field .add-button {
     margin: 25px 0;
@@ -1619,6 +1621,12 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
   .bonds-wrap-page .content-col .bonds-body-wrap form .template-view {
     margin-top: 48px;
+  }
+}
+
+@media (max-width: 350px) {
+  .bonds-wrap-page .content-col #remove-to-job {
+    margin-left: 0 !important;
   }
 }
 

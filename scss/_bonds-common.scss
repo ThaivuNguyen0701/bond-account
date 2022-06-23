@@ -364,6 +364,7 @@
                             }
                             .col-two-field {
                                 margin-top: 0;
+                                display: contents;
                                 .add-button {
                                     background: #F5AF02;
                                     border-radius: 5px;
@@ -847,11 +848,12 @@
                     display: block !important;
                     p {
                         width: 100% !important;
-                        text-align: center;
                     }
                     .col-two-field {
                         justify-content: center;
                         margin: 20px 0; 
+                        display: table-cell !important;
+                        text-align: -webkit-center !important;
                         .add-button {
                             margin: 25px 0;
                         }
@@ -1033,6 +1035,11 @@
                         margin-top: 48px;
                     }
                 }
+            }
+        }
+        @media (max-width: 350px) {
+            #remove-to-job {
+                margin-left: 0 !important;
             }
         }
     }
