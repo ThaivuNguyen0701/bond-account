@@ -841,6 +841,13 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   color: #FFFFFF;
 }
 
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .booking-details input:-webkit-autofill,
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .booking-details textarea:-webkit-autofill,
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .booking-details select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #f5f5f5 inset !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .cost-centre {
   padding-bottom: 60px;
   border-top: 5px solid #294AA2;
@@ -1151,8 +1158,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea::-webkit-scrollbar {
-  width: 5px;
-  height: 10px;
+  width: 6px;
   border-left: 0;
 }
 
