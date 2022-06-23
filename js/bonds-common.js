@@ -12,7 +12,8 @@ function booking_table(){
     $('.template-view table tbody tr').each( function() {
         
         var $field_checkbox = $(this).find('.select-item .checkbox input'),
-            $option_permanent = $(this).find('.select_permanent .options li');
+            $option_permanent = $(this).find('.select_permanent .options li'),
+            $remove_item = $(this).find('.remove-item a');
         
 
         $field_checkbox.change( function() {
@@ -34,6 +35,10 @@ function booking_table(){
             }else{
                 $(this).parent().siblings('.custom-select').removeClass('changed');
             }
+        });
+        $remove_item.on("click", function(e){
+            e.preventDefault();
+            $(this).parents("tr").remove();
         });
 
     });

@@ -4,8 +4,34 @@
         customSelectBox();
         datepicker();
         addapply();
+        subMenu();
+        var timepickerFrom = new TimePicker(["#timeFrom","#timeTo", "#timeDelivery", "#timeready"], {
+            lang: 'en',
+            theme: 'dark'
+          }); 
 
-       
+          timepickerFrom.on('change', function(evt) {
+            
+            var value = (evt.hour || '00') + ':' + (evt.minute || '00');
+            evt.element.value = value; 
+          
+          });
+
+        $(".your-reference").on("change", function(){
+            var val = $(this).val();
+            if(val.search("\\n")>0) {
+                result=val.split('\n');
+                console.log(result);
+                $(this).parents(".bonds-field").find("b").text(result.length);
+            } else {
+                if ($.trim(val).length>0) {
+                    $(this).parents(".bonds-field").find("b").text(1);
+                } else {
+                    $(this).parents(".bonds-field").find("b").text(0);
+                }
+            }
+            
+        });
     });
     
     // Cusom select box to style
@@ -68,6 +94,7 @@ function customSelectBox() {
     
 
     function datepicker(){
+        console.log(1);
         $('.datepicker').datepicker({
             format: 'dd-mm-yyyy',
             autoclose: true,
@@ -82,6 +109,10 @@ function customSelectBox() {
             clearBtn: true,
             disableTouchKeyboard: true
         });
+
+      
+        
+         
     }
 
     function addapply () {
@@ -202,8 +233,10 @@ function customSelectBox() {
         $("#remove-to-job").on("click", function(){
             var wrapper = $(".add-apply-wrapper");
             var count = wrapper.data("count");
-            var newCount = count-1;
-            wrapper.data("count", newCount);
+            if(count>=2) {
+                var newCount = count-1;
+                wrapper.data("count", newCount);
+            }    
             wrapper.find(".manage-apply").each(function( index ) {
                 if ((index+1) == wrapper.find(".manage-apply").length) {
                     $(this).remove();
@@ -212,5 +245,12 @@ function customSelectBox() {
         });
     }
     
+    function subMenu(){
+        $('.info-user__wrap.has-children-menu').click( function(e) {
+            e.preventDefault();
+
+            $(this).toggleClass('active');
+        });
+    }
     
     })( jQuery );

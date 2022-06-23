@@ -14,6 +14,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: sticky;    
             &__logo{
                 text-align: center;
                 img{
@@ -287,7 +288,7 @@
                             position: relative;
                             display: flex;
                             align-items: center;
-                            cursor: default;
+                            cursor: pointer;
                             .meta{
                                 padding-right: 22px;
                                 .name{
@@ -304,12 +305,31 @@
                                     margin-top: 1px;
                                 }
                             }
+                            &.active {
+                                .sub-menu {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
                             .toggle-info{
                                 width: 8px;
                                 height: 8px;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                            }
+                            .sub-menu {
+                                margin: 0;
+                                list-style: none;
+                                background: #fff;
+                                -webkit-box-shadow: 10px 4px 20px 5px #00000008;
+                                box-shadow: 10px 4px 20px 5px #00000008;
+                                border-radius: 10px;
+                                width: 142px;
+                                padding: 20px 32px;
+                                position: absolute;
+                                right: 10px;
+                                top: 40px;
                             }
                         }
                     }
@@ -342,9 +362,6 @@
                     }
                     .cost-centre {
                         padding-bottom: 60px;
-                        border-top: 5px solid #294AA2;
-                        border-bottom: 5px solid #294AA2;
-                        margin-top: 60px;
                     }
                     .feature {
                         padding-top: 40px;    
@@ -429,7 +446,6 @@
                         align-items: center;
                         padding-top: 52px;
                         padding-bottom: 30px;
-                        border-bottom: 5px solid #294AA2;
                         span {
                             font-weight: 400;
                             font-size: 14px;
@@ -441,6 +457,14 @@
                             display: flex;
                             align-items: center;
                         }
+                    }
+                    .underline {
+                        border-top: 3px solid #294aa2;
+                        border-top-right-radius: 5px;
+                        border-top-left-radius: 5px;
+                        border-bottom: 2px solid #294AA2;
+                        border-bottom-right-radius: 5px;
+                        border-bottom-left-radius: 5px;
                     }
                     .col-two-field{
                         margin-top: 53px;
@@ -455,7 +479,7 @@
                             .time-to {
                                 width: 50%;
                                 border-radius: 0 10px 10px 0;
-                                border-left: none;
+                                border-left: none !important;
                             }
                         }
                         .bonds-field {
@@ -589,18 +613,45 @@
                         .col-12{
                             input, .custom-select-wrap, .content, textarea {
                                 width: calc(100% - 37.5px);
-                            }    
-                            textarea::-webkit-scrollbar {
-                                width:6px;
-                                border-left:0;
+                            }  
+                            textarea {
+                                position: relative;
+                            }  
+                            textarea::-webkit-scrollbar-track
+                            {
+                                border-radius: 10px;
+                                background-color: #ffffff;
                             }
-                            textarea::-webkit-scrollbar-track {
-                                background:#C4C4C4;
+
+                            textarea::-webkit-scrollbar
+                            {
+                                width: 5px;
+                                background-color: #ffffff;
                                 position: absolute;
+                                top: 0;
+                                right: 10px;
                             }
-                            textarea::-webkit-scrollbar-thumb {
-                                background: #C4C4C4;
+
+                            textarea::-webkit-scrollbar-thumb
+                            {
+                                border-radius: 10px;
+                                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+                                background-color: #C4C4C4;
+                                position: absolute;
+                                top: 0;
+                                right: 10px;
                             }
+                            // textarea::-webkit-scrollbar {
+                            //     width:6px;
+                            //     border-left:0;
+                            // }
+                            // textarea::-webkit-scrollbar-track {
+                            //     background:#C4C4C4;
+                            //     position: absolute;
+                            // }
+                            // textarea::-webkit-scrollbar-thumb {
+                            //     background: #C4C4C4;
+                            // }
                             &:last-child{
                                 label {
                                     left: 70px;  
@@ -679,6 +730,7 @@
                                             border-radius: 5px;
                                             position: relative;
                                             margin: 0 auto;
+                                            margin-right: 0;
                                             input{
                                                 margin: 0;
                                                 width: 22px;
@@ -798,6 +850,16 @@
                                             width: 24px;
                                             height: 24px;
                                             object-fit: cover;
+                                        }
+                                    }
+                                }
+                            }
+                            tbody tr:hover {
+                                td {
+                                    &.remove-item {
+                                        a {
+                                            opacity: 1;
+                                            visibility: visible;
                                         }
                                     }
                                 }
@@ -1050,4 +1112,8 @@
             }
         }
     }
+}
+._jw-tpk-container ol {
+    padding: 0;
+    margin: 0;
 }

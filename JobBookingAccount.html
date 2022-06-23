@@ -12,12 +12,13 @@
     <script src="lib/js/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap datepicker CSS -->
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-datepicker.min.css"/>
-
     <!-- Bootstrap datepicker JS-->
     <script src="lib/bootstrap/js/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="scss/main.css">
     <link href="lib/select2/css/select2.min.css" rel="stylesheet" />
     <script src="lib/select2/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.css" rel="stylesheet"/>
     <script src="js/global.js"></script>
     <script src="js/bonds-common.js"></script>
    
@@ -96,7 +97,7 @@
                                 </div>
                                 <div class="info-user">
                                     <img class="thumb-user" src="images/user.svg" alt="user">
-                                    <div class="info-user__wrap">
+                                    <div class="info-user__wrap has-children-menu">
                                         <div class="meta">
                                             <div class="name">Lorem Ipsum</div>
                                             <div class="company">ABC Company</div>
@@ -110,6 +111,11 @@
                                                     fill="#C4C4C4" />
                                             </svg>
                                         </div>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Help</a></li>
+                                            <li><a class="current-item" href="#">Contact Us</a></li>
+                                            <li><a href="#">Log out</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -132,18 +138,19 @@
                                                 <div class="content">
                                                     <span>Does this consignment contain dangerous goods?</span>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                        <input class="form-check-input" type="radio" name="consignment" id="flexRadioDefault1">
                                                         <label class="form-check-label" for="flexRadioDefault1">
                                                             Yes
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <input class="form-check-input" type="radio" name="consignment" id="flexRadioDefault2">
                                                         <label class="form-check-label" for="flexRadioDefault2">
                                                             No
                                                         </label>
                                                     </div>
-                                                </div>    
+                                                </div>   
+                                                <div class="underline"></div> 
                                             </div>
                                         </div>
 
@@ -172,7 +179,7 @@
                                                 </div>  
                                                 <div class="bonds-field col-12 col-sm-6">
                                                     <label>Time Ready</label>
-                                                    <input type="text" placeholder="00:00" step="900" name="timeready" onfocus="this.type='time'" required>
+                                                    <input type="text" placeholder="00:00" id="timeready" name="timeready" required>
                                                     <!-- <input type="text" placeholder="00:00" class="timepicker" name="timeready" required> -->
                                                 </div>
                                             </div>
@@ -182,13 +189,15 @@
                                             <div class="col-two-field">
                                                 <div class="bonds-field col-12 col-sm-6">
                                                     <label>Delivery Time</label>
-                                                    <input type="text" placeholder="00:00" step="900" name="delivery" onfocus="this.type='time'" required>
-                                                    <!-- <input type="text" placeholder="00:00" class="timepicker"  name="delivery" required> -->
+                                                    <!-- <input type="text" placeholder="00:00" step="900" name="delivery" onfocus="this.type='time'" required> -->
+                                                     <input type="text" placeholder="00:00" id="timeDelivery"  name="delivery" required>
                                                 </div>
-                                                <div class="bonds-field col-12 col-sm-6 bond-field-delivery">
+                                                <div class="bonds-field col-12 col-sm-6 bond-field-delivery">   
                                                     <label>Delivery Window</label>
-                                                    <input type="text" placeholder="From 00:00" class="time-from" step="900" name="from" onfocus="this.type='time'" required>
-                                                    <input type="text" placeholder="To 00:00" class="time-to" step="900" name="to" onfocus="this.type='time'" required>
+                                                    <input type="text" class="time-from" id="timeFrom" placeholder="From 00:00">
+                                                    <input type="text" class="time-to" id="timeTo" placeholder="To 00:00">
+                                                    <!-- <input type="text" placeholder="From 00:00" class="time-from" step="900" name="from" onfocus="this.type='time'" required>
+                                                    <input type="text" placeholder="To 00:00" class="time-to" step="900" name="to" onfocus="this.type='time'" required> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -226,13 +235,13 @@
                                                     <div class="content">
                                                         <span>Insurance?</span>
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                                            <input class="form-check-input" type="radio" name="insurance" id="flexRadioDefault3">
                                                             <label class="form-check-label" for="flexRadioDefault3">
                                                                 Yes
-                                                            </label>
+                                                            </label>  
                                                         </div>
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                                                            <input class="form-check-input" type="radio" name="insurance" id="flexRadioDefault4">
                                                             <label class="form-check-label" for="flexRadioDefault4">
                                                                 No
                                                             </label>
@@ -277,7 +286,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+                                        <div class="underline" style="margin-top: 60px;"></div>
                                         <div class="cost-centre">
                                             <div class="booking-details">
                                                 <div class="col-two-field">
@@ -291,8 +300,8 @@
                                                     </div>
                                                     <div class="bonds-field col-12 col-sm-6">
                                                         <label>Your Reference</label>
-                                                        <input type="text" name="your-reference" required>
-                                                        <small>0 lines entered. Max 20 characters per line</small>
+                                                        <textarea  class="your-reference" cols='1' rows='8' name="your-reference" required></textarea>
+                                                        <small><b>0</b> lines entered. Max 20 characters per line</small>
                                                     </div>
                                                 </div>
                                             </div>
@@ -318,7 +327,7 @@
                                                 </div>
                                             </div>  
                                         </div>
-
+                                        <div class="underline"></div>
                                         <div class="manage-job">
                                             <div class="title">Manage Job Notifications</div>
                                             <div class="col-two-field">
@@ -378,7 +387,7 @@
                                                             </select>
                                                         </td>
                                                         <td class="remove-item hide">
-                                                            <a href="Javascript:;">
+                                                            <a href="#">
                                                                 <img src="images/icons/remove_item.svg">
                                                             </a>
                                                         </td>
@@ -400,7 +409,7 @@
                                                             </select>
                                                         </td>
                                                         <td class="remove-item hide">
-                                                            <a href="Javascript:;">
+                                                            <a href="#">
                                                                 <img src="images/icons/remove_item.svg">
                                                             </a>
                                                         </td>
@@ -422,7 +431,7 @@
                                                             </select>
                                                         </td>
                                                         <td class="remove-item hide">
-                                                            <a href="Javascript:;#">
+                                                            <a href="#">
                                                                 <img src="images/icons/remove_item.svg">
                                                             </a>
                                                         </td>
@@ -430,7 +439,7 @@
                                                 </tbody>
                                             </table>
                                         </div>
-
+                                        <div class="underline"></div>
                                         <div class="cost-centre feature">
                                             <div class="title">Choose one of these special features if required:</div>
                                             <div class="booking-details">
@@ -446,7 +455,7 @@
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <div class="underline"></div>
                                         <div class="cost-centre feature leg-number">
                                             <div class="title-leg">
                                                 <p>Leg Number 1:</p>
@@ -541,7 +550,7 @@
                                         </div>
                                     
                             
-                                        
+                                        <div class="underline"></div>
                                         <div class="cost-centre feature leg-number leg-number-2">
                                             <div class="add-apply-wrapper" data-count="2"> 
                                                 <div class="manage-apply">    
@@ -648,16 +657,14 @@
                                             </div>    
                                             <div class="title-leg title-leg-bottom row">
                                                 <p class="col-12 col-lg-6">Please be advised that restrictions apply to additional legs</p>
-                                                    <div class="col-6 col-lg-3 col-two-field">
-                                                        <div class="bonds-field bonds-field-description">
-                                                            <input class="add-button add" id="add-to-job" type="button" value="Add Another Leg">
-                                                        </div>
+                                                <div class="col-12 col-lg-6 col-two-field">
+                                                    <div class="bonds-field bonds-field-description">
+                                                        <input class="add-button add" id="add-to-job" type="button" value="Add Another Leg">
                                                     </div>
-                                                    <div class="col-6 col-lg-3 col-two-field">
-                                                        <div class="bonds-field bonds-field-description">
-                                                            <a class="add-button remove" id="remove-to-job" href="javascript:void(0);">Add Return Leg</a>
-                                                        </div>
+                                                    <div class="bonds-field bonds-field-description">
+                                                        <a class="add-button remove" id="remove-to-job" href="javascript:void(0);">Add Return Leg</a>
                                                     </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <!-- <div class="add-job-wrapper">

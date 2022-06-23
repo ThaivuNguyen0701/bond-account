@@ -308,7 +308,7 @@ body tbody tr:hover {
 body td, body th {
   text-align: left;
   vertical-align: middle;
-  padding: 15px 24px;
+  padding: 15px;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
@@ -463,6 +463,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .bonds-wrap-page .menu-col .bonds-menu__logo {
@@ -792,7 +794,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: default;
+  cursor: pointer;
 }
 
 .bonds-wrap-page .content-col .top-bar__account--logged .info-user__wrap .meta {
@@ -814,6 +816,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   margin-top: 1px;
 }
 
+.bonds-wrap-page .content-col .top-bar__account--logged .info-user__wrap.active .sub-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
 .bonds-wrap-page .content-col .top-bar__account--logged .info-user__wrap .toggle-info {
   width: 8px;
   height: 8px;
@@ -826,6 +833,20 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.bonds-wrap-page .content-col .top-bar__account--logged .info-user__wrap .sub-menu {
+  margin: 0;
+  list-style: none;
+  background: #fff;
+  -webkit-box-shadow: 10px 4px 20px 5px #00000008;
+  box-shadow: 10px 4px 20px 5px #00000008;
+  border-radius: 10px;
+  width: 142px;
+  padding: 20px 32px;
+  position: absolute;
+  right: 10px;
+  top: 40px;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap .wrap-template {
@@ -850,9 +871,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .cost-centre {
   padding-bottom: 60px;
-  border-top: 5px solid #294AA2;
-  border-bottom: 5px solid #294AA2;
-  margin-top: 60px;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .feature {
@@ -962,7 +980,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
           align-items: center;
   padding-top: 52px;
   padding-bottom: 30px;
-  border-bottom: 5px solid #294AA2;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .content span {
@@ -980,6 +997,15 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .underline {
+  border-top: 3px solid #294aa2;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom: 2px solid #294AA2;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field {
@@ -1005,7 +1031,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .bond-field-delivery .time-to {
   width: 50%;
   border-radius: 0 10px 10px 0;
-  border-left: none;
+  border-left: none !important;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .bonds-field {
@@ -1157,18 +1183,30 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   width: calc(100% - 37.5px);
 }
 
-.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea::-webkit-scrollbar {
-  width: 6px;
-  border-left: 0;
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea {
+  position: relative;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea::-webkit-scrollbar-track {
-  background: #C4C4C4;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea::-webkit-scrollbar {
+  width: 5px;
+  background-color: #ffffff;
   position: absolute;
+  top: 0;
+  right: 10px;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea::-webkit-scrollbar-thumb {
-  background: #C4C4C4;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #C4C4C4;
+  position: absolute;
+  top: 0;
+  right: 10px;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12:last-child label {
@@ -1265,6 +1303,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border-radius: 5px;
   position: relative;
   margin: 0 auto;
+  margin-right: 0;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .template-view table tbody tr td.select-item .checkbox input {
@@ -1400,6 +1439,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   height: 24px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .template-view table tbody tr:hover td.remove-item a {
+  opacity: 1;
+  visibility: visible;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .st-bonds-buttons {
@@ -1636,6 +1680,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
 }
 
+._jw-tpk-container ol {
+  padding: 0;
+  margin: 0;
+}
+
 /* Fonts */
 /* Color */
 /* Break point */
@@ -1775,7 +1824,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .content-body-booking .wrap-template .manage-job {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .content-body-booking .wrap-template .rt-buttons-controls.multi .cta-button.yellow {
@@ -1786,6 +1835,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   .content-body-booking .wrap-template .rt-buttons-controls.multi .cta-button.yellow {
     margin-left: 24px;
   }
+}
+
+.template-view tbody tr:hover td .remove-item a {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .bonds-wrap-page .menu-col .bonds-menu__nav .item.has-children-menu:before {
