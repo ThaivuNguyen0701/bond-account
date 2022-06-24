@@ -1113,6 +1113,9 @@
                         flex-direction: column;
                         .col-12{
                             width: 100%;
+                            small {
+                                margin-left: 0;
+                            }
                             .content {
                                 margin-left: 0;
                             }
