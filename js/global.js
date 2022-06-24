@@ -249,7 +249,7 @@
     }
     
     function subMenu(){
-        $('.info-user__wrap.has-children-menu').click( function(e) {
+        $('.info-user.has-children-menu').click( function(e) {
             e.preventDefault();
 
             $(this).toggleClass('active');

@@ -6,6 +6,12 @@ body{
     font-size: 14px;
     font-weight: 400;
     line-height: 125%;
+    overflow-x: hidden;
+    .container-fluid {
+      >.row {
+        margin: 0;
+      }
+    }
     &.overflow-hidden{
       overflow: hidden;
     }

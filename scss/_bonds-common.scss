@@ -278,6 +278,12 @@
                         display: flex;
                         align-items: center;
                         padding-left: 12px;
+                        &.active {
+                            .sub-menu {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
                         .thumb-user{
                             width: 32px;
                             height: 32px;
@@ -303,12 +309,6 @@
                                     line-height: 12px;
                                     color: #C4C4C4;
                                     margin-top: 1px;
-                                }
-                            }
-                            &.active {
-                                .sub-menu {
-                                    opacity: 1;
-                                    visibility: visible;
                                 }
                             }
                             .toggle-info{
@@ -395,6 +395,10 @@
                             padding: 14px;
                             padding-left: 24px;
                             align-items: center;
+                            .title-leg-inner {
+                                display: flex;
+                                align-items: center;
+                            }
                             p {
                                 font-weight: 700;
                                 font-size: 18px;
@@ -932,6 +936,11 @@
                             margin-left: 50px;
                         }
                     }
+                    .bonds-field-description {
+                        &:last-child{
+                            margin-left: 0;
+                        }
+                    }
                 }
             }
         }
@@ -967,6 +976,21 @@
                     padding: 0 16px;
                 }
                 form .template-form {
+                    .cost-centre {
+                        padding-bottom: 0;
+                    }
+                    .contact-info {
+                        .content {
+                            padding-top: 30px;
+                        }
+                    }
+                    .template-view {
+                        margin-bottom: 0;
+                        margin-top: 25px;
+                    }
+                    .underline {
+                        border: 0;
+                    }
                     .leg-number-2 {
                         .title-leg {
                             p {
@@ -987,6 +1011,11 @@
                             &:last-child{
                                 margin-left: 32px;
                             }
+                        }
+                        .bonds-field-description {
+                            &:last-child{
+                                margin-left: 0;   
+                            }   
                         }
                         .bonds-field {
                             .content {
@@ -1084,6 +1113,9 @@
                         flex-direction: column;
                         .col-12{
                             width: 100%;
+                            .content {
+                                margin-left: 0;
+                            }
                             input, .custom-select-wrap, textarea {
                                 width: 100%;
                             }
@@ -1108,8 +1140,8 @@
                         .title-leg {
                             display: block !important;
                             text-align: center;
-                            p {
-                                margin: 0 !important;
+                            .subtitle-two {
+                                margin-left: 0 !important;  
                             }
                         }
                     }           
@@ -1124,7 +1156,6 @@
                             margin-top: 24px;
                             &.multi{
                                 flex-direction: column;
-                                align-items: flex-start;
                                 .cta-button.yellow{
                                     margin-left: 0;
                                     margin-top: 16px;
