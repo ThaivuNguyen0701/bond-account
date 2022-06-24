@@ -847,6 +847,29 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   position: absolute;
   right: 10px;
   top: 40px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.bonds-wrap-page .content-col .top-bar__account--logged .info-user__wrap .sub-menu a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 36px;
+  color: #7C7C7C;
+  text-decoration: none;
+}
+
+.bonds-wrap-page .content-col .top-bar__account--logged .info-user__wrap .sub-menu a:hover {
+  color: #294AA2;
+  font-weight: 700;
+}
+
+.bonds-wrap-page .content-col .top-bar__account--logged .info-user__wrap .sub-menu a.current-item {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 36px;
+  color: #294AA2;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap .wrap-template {
@@ -886,7 +909,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: flex;
   background: rgba(194, 209, 217, 0.2);
   padding: 14px;
   padding-left: 24px;
@@ -900,8 +922,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-size: 18px;
   line-height: 21px;
   color: #11175D;
-  margin-right: 31px;
   margin-bottom: 0;
+  margin-right: 31px;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .leg-number .title-leg .subtitle-two {
@@ -910,7 +932,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .leg-number .title-leg .col-two-field {
   margin-top: 0;
-  display: contents;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .leg-number .title-leg .col-two-field .add-button {
@@ -922,6 +946,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-size: 14px;
   line-height: 16px;
   color: #fff;
+  min-width: 150px;
+  width: auto;
+  text-align: center;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .leg-number .title-leg .col-two-field #remove-to-job {
@@ -947,6 +974,12 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   right: 12px;
 }
 
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .leg-number .title-leg .button-right .bonds-field-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .leg-number-2 {
   border-bottom: none;
   padding: 0;
@@ -961,7 +994,13 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .leg-number-2 .title-leg-bottom p {
-  width: 50%;
+  margin-right: 0;
+}
+
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .leg-number-2 .title-leg-bottom .button-right {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .title {
@@ -1492,22 +1531,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .bonds-field label {
     padding: 0 8px;
   }
-  .bonds-wrap-page .content-col .bonds-body-wrap .title-leg-bottom {
-    display: block !important;
-  }
-  .bonds-wrap-page .content-col .bonds-body-wrap .title-leg-bottom p {
-    width: 100% !important;
-  }
   .bonds-wrap-page .content-col .bonds-body-wrap .title-leg-bottom .col-two-field {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 20px 0;
-    display: table-cell !important;
-    text-align: -webkit-center !important;
-  }
-  .bonds-wrap-page .content-col .bonds-body-wrap .title-leg-bottom .col-two-field .add-button {
-    margin: 25px 0;
   }
 }
 
@@ -1521,11 +1548,20 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   .bonds-wrap-page .content-col .bonds-body-wrap .wrap-template {
     padding: 0 16px;
   }
+  .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .leg-number-2 .title-leg p {
+    text-align: center;
+  }
   .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .leg-number-2 .title-leg .col-two-field {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     margin: 25px 0;
+  }
+  .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .leg-number-2 .title-leg .button-right {
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit;
+        -ms-flex-direction: inherit;
+            flex-direction: inherit;
   }
   .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 {
     width: calc(100% / 2 - 16px);
@@ -1612,6 +1648,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   .bonds-wrap-page .content-col .top-bar__account--logged .info-user__wrap .meta {
     display: none;
   }
+  .bonds-wrap-page .content-col .top-bar__account--logged .info-user__wrap .sub-menu {
+    z-index: 9;
+  }
   .bonds-wrap-page .content-col .bonds-body-wrap .wrap-template .manage-job {
     margin-top: 48px;
   }
@@ -1674,9 +1713,19 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
 }
 
-@media (max-width: 350px) {
-  .bonds-wrap-page .content-col #remove-to-job {
+@media (max-width: 360px) {
+  .bonds-wrap-page .content-col .button-right {
+    display: block;
+  }
+  .bonds-wrap-page .content-col .button-right .bonds-field-description {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .bonds-wrap-page .content-col .button-right .bonds-field-description #remove-to-job {
     margin-left: 0 !important;
+    margin-top: 25px;
   }
 }
 

@@ -16,7 +16,7 @@
     <script src="lib/bootstrap/js/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="scss/main.css">
     <link href="lib/select2/css/select2.min.css" rel="stylesheet" />
-    <script src="lib/select2/js/select2.min.js"></script>
+    <script src="lib/select2/js/select2.min.js"></script>  
     <script src="https://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.js"></script>
     <link href="https://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.css" rel="stylesheet"/>
     <script src="js/global.js"></script>
@@ -533,8 +533,8 @@
                                                 </div>
                                                 <div class="bonds-field col-12 col-sm-6">
                                                     <label>References for this leg</label>
-                                                    <input type="text" name="references" required>
-                                                    <small>1 lines entered. Max 20 characters per line</small>
+                                                    <textarea  class="your-reference" cols='1' rows='8' name="leg-reference" required></textarea>
+                                                    <small><b>0</b> lines entered. Max 20 characters per line</small>
                                                 </div>
                                             </div>
                                             <div class="col-two-field">
@@ -639,8 +639,8 @@
                                                         </div>
                                                         <div class="bonds-field col-12 col-sm-6">
                                                             <label>References for this leg</label>
-                                                            <input type="text" name="references" required>
-                                                            <small>1 lines entered. Max 20 characters per line</small>
+                                                            <textarea  class="your-reference" cols='1' rows='8' name="leg-reference-2" required></textarea>
+                                                            <small><b>0</b> lines entered. Max 20 characters per line</small>
                                                         </div>
                                                     </div>
                                                     <div class="col-two-field">
@@ -656,8 +656,8 @@
                                                 </div>
                                             </div>    
                                             <div class="title-leg title-leg-bottom row">
-                                                <p class="col-12 col-lg-6">Please be advised that restrictions apply to additional legs</p>
-                                                <div class="col-12 col-lg-6 col-two-field">
+                                                <p class="col-12 col-md-6">Please be advised that restrictions apply to additional legs</p>
+                                                <div class="col-12 col-md-6 col-two-field button-right">
                                                     <div class="bonds-field bonds-field-description">
                                                         <input class="add-button add" id="add-to-job" type="button" value="Add Another Leg">
                                                     </div>

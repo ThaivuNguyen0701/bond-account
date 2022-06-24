@@ -330,6 +330,26 @@
                                 position: absolute;
                                 right: 10px;
                                 top: 40px;
+                                opacity: 0;
+                                visibility: hidden;
+                                a {
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 12px;
+                                    line-height: 36px;
+                                    color: #7C7C7C;
+                                    text-decoration: none;
+                                    &:hover {
+                                        color: #294AA2;
+                                        font-weight: 700;
+                                    }
+                                }
+                                a.current-item {
+                                    font-weight: 700;
+                                    font-size: 12px;
+                                    line-height: 36px;
+                                    color: #294AA2;  
+                                }
                             }
                         }
                     }
@@ -371,7 +391,6 @@
                         margin-top: 0; 
                         .title-leg {
                             display: flex;
-                            display: flex;
                             background: rgba(194, 209, 217, 0.2);
                             padding: 14px;
                             padding-left: 24px;
@@ -381,15 +400,15 @@
                                 font-size: 18px;
                                 line-height: 21px;
                                 color: #11175D;
-                                margin-right: 31px;
                                 margin-bottom: 0;
+                                margin-right: 31px;
                             }
                             .subtitle-two {
                                 margin-left: 50px;
                             }
                             .col-two-field {
                                 margin-top: 0;
-                                display: contents;
+                                display: flex;
                                 .add-button {
                                     background: #F5AF02;
                                     border-radius: 5px;
@@ -399,6 +418,9 @@
                                     font-size: 14px;
                                     line-height: 16px;
                                     color: #fff;
+                                    min-width: 150px;
+                                    width: auto;
+                                    text-align: center; 
                                 }
                                 #remove-to-job {
                                     margin-left: 15px;
@@ -420,6 +442,11 @@
                                     }
                                 }
                             }
+                            .button-right {
+                                .bonds-field-description {
+                                    display: flex;
+                                }
+                            }
                         }
                     }
                     .leg-number-2 {
@@ -431,7 +458,10 @@
                         .title-leg-bottom {
                             margin-top: 52px;
                             p {
-                                width: 50%;
+                                margin-right: 0;
+                            }
+                            .button-right {
+                                justify-content: right;   
                             }
                         }
                     }
@@ -914,17 +944,13 @@
                     }
                 }
                 .title-leg-bottom {
-                    display: block !important;
                     p {
-                        width: 100% !important;
+                        
                     }
                     .col-two-field {
                         justify-content: center;
-                        margin: 20px 0; 
-                        display: table-cell !important;
-                        text-align: -webkit-center !important;
                         .add-button {
-                            margin: 25px 0;
+
                         }
                     }
                 }
@@ -943,9 +969,15 @@
                 form .template-form {
                     .leg-number-2 {
                         .title-leg {
+                            p {
+                                text-align: center;
+                            }
                             .col-two-field {
                                 justify-content: center;
                                  margin: 25px 0;
+                            }
+                            .button-right {
+                                flex-direction: inherit;
                             }
                         }
                     }
@@ -1032,8 +1064,13 @@
                     width: 95px;
                     &--logged {
                         padding: 0;
-                        .info-user__wrap .meta {
-                            display: none;
+                        .info-user__wrap {
+                            .meta {
+                                display: none;
+                            }
+                            .sub-menu {
+                                z-index: 9;
+                            }    
                         }
                     }
                 }
@@ -1106,9 +1143,17 @@
                 }
             }
         }
-        @media (max-width: 350px) {
-            #remove-to-job {
-                margin-left: 0 !important;
+        @media (max-width: 360px) {
+            .button-right {
+                display: block;
+                .bonds-field-description {
+                    width: 100%;
+                    justify-content: center;
+                    #remove-to-job {
+                        margin-left: 0 !important;
+                        margin-top: 25px;
+                    }
+                }
             }
         }
     }
