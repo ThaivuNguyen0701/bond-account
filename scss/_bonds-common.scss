@@ -982,14 +982,24 @@
                     .contact-info {
                         .content {
                             padding-top: 30px;
+                            padding-bottom: 10px;
                         }
                     }
                     .template-view {
                         margin-bottom: 0;
                         margin-top: 25px;
                     }
-                    .underline {
+                    .underline-hidemb {
                         border: 0;
+                    }
+                    .leg-number {
+                        .title-leg {
+                            .custom-select-wrap {
+                                select {
+                                    padding: 12px 24px !important;  
+                                }
+                            }
+                        }
                     }
                     .leg-number-2 {
                         .title-leg {
@@ -1114,10 +1124,10 @@
                         .col-12{
                             width: 100%;
                             small {
-                                margin-left: 0;
+                                margin-left: 0 !important;
                             }
                             .content {
-                                margin-left: 0;
+                                margin-left: 0 !important;
                             }
                             input, .custom-select-wrap, textarea {
                                 width: 100%;
@@ -1128,6 +1138,9 @@
                                 input, .custom-select-wrap, textarea {
                                     margin-left: 0;
                                 }    
+                                label {
+                                    left: 16px;
+                                }
                             }
                             .input-group-append {
                                 right: 15px;
@@ -1143,8 +1156,12 @@
                         .title-leg {
                             display: block !important;
                             text-align: center;
+                            padding: 0;
                             .subtitle-two {
                                 margin-left: 0 !important;  
+                            }
+                            .title-leg-inner {
+                                justify-content: center;
                             }
                         }
                     }           
@@ -1152,6 +1169,7 @@
             }
         }
         @media (max-width: 424.98px){
+           
             .bonds-body-wrap {
                 form {
                     .template-form {
@@ -1195,4 +1213,10 @@
 ._jw-tpk-container ol {
     padding: 0;
     margin: 0;
+}
+
+@media (max-width: 412px) {
+    .datepicker-dropdown {
+        left: 0 !important;
+    }
 }
