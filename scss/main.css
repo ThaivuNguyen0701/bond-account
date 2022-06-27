@@ -1232,8 +1232,80 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   color: #ffffff;
 }
 
-.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 input, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .custom-select-wrap, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .content, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea {
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 input, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .custom-select-wrap, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .content, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .btn-group {
   width: calc(100% - 37.5px);
+  height: 73px;
+}
+
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 input .btn-secondary, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .custom-select-wrap .btn-secondary, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .content .btn-secondary, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea .btn-secondary, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .btn-group .btn-secondary {
+  border: 1px solid #294AA2;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  vertical-align: middle;
+  padding: 28px 50px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  color: #000000;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-align: left;
+}
+
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 input .btn-secondary:before, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .custom-select-wrap .btn-secondary:before, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .content .btn-secondary:before, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea .btn-secondary:before, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .btn-group .btn-secondary:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-image: url(../images/icons/ic_select.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: contain;
+  top: 30px;
+  right: 24px;
+  -webkit-transition: ease .25s all;
+  transition: ease .25s all;
+}
+
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 input .btn-secondary:after, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .custom-select-wrap .btn-secondary:after, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .content .btn-secondary:after, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea .btn-secondary:after, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .btn-group .btn-secondary:after {
+  display: none;
+}
+
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 input .dropdown-menu, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .custom-select-wrap .dropdown-menu, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .content .dropdown-menu, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea .dropdown-menu, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .btn-group .dropdown-menu {
+  width: calc(100% - 24px);
+  z-index: 999;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #fbfbfb;
+  background-color: #fff;
+  -webkit-box-shadow: #00000029 0 3px 6px;
+  box-shadow: #00000029 0 3px 6px;
+}
+
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 input .dropdown-menu li, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .custom-select-wrap .dropdown-menu li, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .content .dropdown-menu li, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea .dropdown-menu li, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .btn-group .dropdown-menu li {
+  margin: 0;
+  padding: 8px 22px;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.11);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+}
+
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 input .dropdown-menu li:hover, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .custom-select-wrap .dropdown-menu li:hover, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .content .dropdown-menu li:hover, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea .dropdown-menu li:hover, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .btn-group .dropdown-menu li:hover {
+  background: #294AA2;
+}
+
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 input .dropdown-menu li:hover a, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .custom-select-wrap .dropdown-menu li:hover a, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .content .dropdown-menu li:hover a, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea .dropdown-menu li:hover a, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .btn-group .dropdown-menu li:hover a {
+  color: #ffffff;
+}
+
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 input .dropdown-menu li:hover a:hover, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .custom-select-wrap .dropdown-menu li:hover a:hover, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .content .dropdown-menu li:hover a:hover, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea .dropdown-menu li:hover a:hover, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 .btn-group .dropdown-menu li:hover a:hover {
+  background: #294AA2;
 }
 
 .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12 textarea {

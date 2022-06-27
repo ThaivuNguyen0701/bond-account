@@ -644,9 +644,72 @@
                                 }
                             }
                         }
-                        .col-12{
-                            input, .custom-select-wrap, .content, textarea {
+                        .col-12{  
+                            input, .custom-select-wrap, .content, textarea, .btn-group { 
                                 width: calc(100% - 37.5px);
+                                height: 73px;
+                                .btn-secondary {
+                                    border: 1px solid #294AA2;
+                                    background: #fff;
+                                    border-radius: 10px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    display: block;
+                                    vertical-align: middle;
+                                    padding: 28px 50px;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 16px;
+                                    letter-spacing: 0.1em;
+                                    color: #000000;
+                                    box-shadow: none;
+                                    text-align: left;
+                                    &:before {
+                                        content: "";
+                                        width: 12px;
+                                        height: 12px;
+                                        background-image: url(../images/icons/ic_select.svg);
+                                        background-repeat: no-repeat;
+                                        position: absolute;
+                                        background-size: contain;
+                                        top: 30px;
+                                        right: 24px;
+                                        -webkit-transition: ease .25s all;
+                                        transition: ease .25s all;
+                                    } 
+                                    &:after {
+                                        display: none;
+                                    }
+                                }
+                                .dropdown-menu {
+                                    width: calc(100% - 24px);
+                                    z-index: 999;
+                                    padding: 0;
+                                    list-style: none;
+                                    border: 1px solid #fbfbfb;
+                                    background-color: #fff;
+                                    -webkit-box-shadow: #00000029 0 3px 6px;
+                                    box-shadow: #00000029 0 3px 6px;
+                                    li {
+                                        margin: 0;
+                                        padding: 8px 22px;
+                                        border-bottom: 1px solid rgba(112, 112, 112, 0.11);
+                                        font-weight: 400;
+                                        font-size: 14px;   
+                                        line-height: 16px;
+                                        letter-spacing: 0.1em;
+                                        &:hover {
+                                            background: #294AA2;
+                                            a {
+                                                color: #ffffff;
+                                                &:hover {
+                                                    background: #294AA2; 
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }  
                             textarea {
                                 position: relative;

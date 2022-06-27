@@ -8,7 +8,9 @@
     <title>Job Booking</title>
     <link href="lib/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <script src="lib/js/moment.js"></script>
+    <script src="lib/js/jquery-3.6.0.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="lib/js/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap datepicker CSS -->
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-datepicker.min.css"/>
@@ -205,11 +207,16 @@
                                             <div class="col-two-field">
                                                 <div class="bonds-field col-12 col-sm-6">
                                                     <label>Delivery by Reason</label>
-                                                    <select class="js-example-basic-single" name="state">
-                                                        <option value="LCL">Loose Container Loading</option>
-                                                        <option value="AL">Alabama</option>
-                                                        <option value="WY">Wyoming</option>
-                                                    </select>
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                                            Loose Container Loading
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                                          <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                          <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                          <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                                 <div class="bonds-field col-12 col-sm-6">
                                                     <label>Service Code</label>
