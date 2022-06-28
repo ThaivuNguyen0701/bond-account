@@ -5,6 +5,7 @@
         datepicker();
         addapply();
         subMenu();
+        addsubMenu();
         var timepickerFrom = new TimePicker(["#timeFrom","#timeTo", "#timeDelivery", "#timeready"], {
             lang: 'en',
             theme: 'dark'
@@ -255,5 +256,22 @@
             $(this).toggleClass('active');
         });
     }
+    function addsubMenu(){
+        if( $(window).width() > 1200 ){
+            $('.item.has-children-menu').click( function(e) {
+                e.preventDefault();
+    
+                $(this).toggleClass('active');
+            });
+        }else{
+            $('.item.has-children-menu').click( function(e) {
+                e.preventDefault();
+    
+                $(this).find('.sub-menu').slideToggle();
+            });
+        }
+        
+    }
+    
     
     })( jQuery );

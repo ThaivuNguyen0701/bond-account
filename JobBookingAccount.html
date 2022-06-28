@@ -57,8 +57,17 @@
                             <li class="item">
                                 <a href="#">Activity Report</a>
                             </li>
-                            <li class="item">
-                                <a href="#">Account Management</a>
+                            <li class="item has-children-menu">
+                                <span>Account Management</span>
+                                <ul class="sub-menu">
+                                    <li><a class="current-item" href="#">Manage Address</a></li>
+                                    <li><a href="#">Manage Cost Centre</a></li>
+                                    <li><a href="#">Billing Enquiry & Payments</a></li>
+                                    <li><a href="#">Fuel Levy Rates</a></li>
+                                    <li><a href="#">Change Password</a></li>
+                                    <li><a href="#">Service Parameters and Charges</a></li>
+                                    <li><a href="#">Upload eJob File</a></li>
+                                </ul>
                             </li>
                         </div>
 
@@ -220,11 +229,16 @@
                                                 </div>
                                                 <div class="bonds-field col-12 col-sm-6">
                                                     <label>Service Code</label>
-                                                    <select class="js-example-basic-single" name="state">
-                                                        <option value="LCL">Loose Container Loading</option>
-                                                        <option value="AL">Alabama</option>
-                                                        <option value="WY">Wyoming</option>
-                                                    </select>
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="serviceDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                                            Loose Container Loading
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                                          <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                          <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                          <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

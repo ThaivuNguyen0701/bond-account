@@ -1342,7 +1342,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   left: 0;
 }
 
-.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12:last-child input, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12:last-child .custom-select-wrap, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12:last-child textarea, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12:last-child small {
+.bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12:last-child input, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12:last-child .custom-select-wrap, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12:last-child textarea, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12:last-child small, .bonds-wrap-page .content-col .bonds-body-wrap form .template-form .col-two-field .col-12:last-child .btn-group {
   margin-left: 37.5px;
 }
 
