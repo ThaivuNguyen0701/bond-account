@@ -1864,6 +1864,97 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* Fonts */
 /* Color */
 /* Break point */
+.combo *,
+.combo *::before,
+.combo *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.combo {
+  display: block;
+  width: calc(100% - 37.5px);
+  height: 73px;
+  max-width: none;
+  position: relative;
+}
+
+.combo::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-image: url(../images/icons/ic_select.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: contain;
+  top: 30px;
+  right: 24px;
+  -webkit-transition: ease .25s all;
+  transition: ease .25s all;
+}
+
+.combo-input {
+  background-color: #fff;
+  border: 1px solid #294AA2;
+  width: 100%;
+  border-radius: 10px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  vertical-align: middle;
+  padding: 28px 50px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-align: left;
+}
+
+.combo-label {
+  display: block;
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: 0.25em;
+}
+
+.combo-menu {
+  border-radius: 0 0 4px 4px;
+  display: none;
+  max-height: 300px;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: calc(100% - 24px);
+  z-index: 999;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #fbfbfb;
+  background-color: #fff;
+  -webkit-box-shadow: #00000029 0 3px 6px;
+  box-shadow: #00000029 0 3px 6px;
+}
+
+.open .combo-menu {
+  display: block;
+}
+
+.combo-option {
+  padding: 10px 12px 12px;
+}
+
+.combo-option:hover {
+  background: #294AA2;
+}
+
+.combo-option[aria-selected="true"] {
+  padding-right: 30px;
+  position: relative;
+}
+
 .datepicker td {
   width: 40px;
   height: 40px;

@@ -33,6 +33,7 @@
             }
             
         });
+        
     });
     
     // Cusom select box to style
@@ -272,6 +273,7 @@
         }
         
     }
+
     
     
     })( jQuery );
